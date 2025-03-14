@@ -3,8 +3,33 @@ let addButton=document.getElementById("addButton");
 let saveButton=document.getElementById("saveButton");
 
 
-function getTodoListFromLocalStorage(){
 
+function onAddTodo(){
+    let userInput=document.getElementById("userInputValue");
+    let userInputValue=userInput.value;
+    
+    if(userInputValue===""){
+        alert("Enter a valid Input");
+        return;
+    }
+    
+    idCount=idCount+1;
+    let newObject={
+        text:userInputValue,
+        id:idCount,
+        isChecked:false
+    };    
+    object.push(newObject);    
+    createTodo(newObject);
+    userInput.value="";
+}
+
+addButton.onclick=function(){
+    onAddTodo();
+}
+
+
+function getTodoListFromLocalStorage(){
     let storedContent=localStorage.getItem("userInputValue");
     let parsedList=JSON.parse(storedContent);
     if(parsedList.value===null){
@@ -103,34 +128,8 @@ function createTodo(todo){
     deleteIcon.classList.add("far", "fa-trash-alt", "delete-icon");
     deleteIcon.onclick=function(){
         onDeleteTodo(todoId);
-    }
+    };
     deleteIconContainer.appendChild(deleteIcon);
-}
-
-
-function onAddTodo(){
-    let userInput=document.getElementById("userInputValue");
-    let userInputValue=userInput.value;
-    
-    if(userInputValue===""){
-        alert("Enter a valid Input");
-        return;
-    }
-    
-    idCount=idCount+1;
-    let newObject={
-        text:userInputValue,
-        id:idCount,
-        isChecked:false
-    };    
-    object.push(newObject);    
-    createTodo(newObject);
-    userInput.value="";
-}
-
-addButton.onclick=function(){
-    onAddTodo();
-    
 }
 
 for(let todo of object){
