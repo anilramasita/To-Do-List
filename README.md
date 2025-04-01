@@ -1,8 +1,10 @@
 # TO-DO LIST USING HTML CSS AND JAVASCRIPT
 
-I have made a Todo-List using HTML, CSS, Bootstrap and Javascript
-Made the website Responsive and Dynamic
-I have made it to user friendly website
+# Link to access : https://to-do-list-anils-projects-e777caab.vercel.app/
+
+1. Create index.html, style.css and script.js in your pwd
+2. Copy the code to your working directory
+3. Run index.html file
 
 The interface will look like this 👇👇
-![Screenshot (11)](https://github.com/user-attachments/assets/20ffdcbc-eaf8-4d65-bbeb-df6c56b78c73)
+![Image](https://github.com/user-attachments/assets/2ee576c4-bcb5-4b1f-843b-6dfbd1909c70)
