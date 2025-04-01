@@ -7,7 +7,7 @@ function getTodoListFromLocalStorage(){
 
     let storedContent=localStorage.getItem("userInputValue");
     let parsedList=JSON.parse(storedContent);
-    if(parsedList.value===null){
+    if(parsedList===null){
         return [];
     }else{
         return parsedList;
