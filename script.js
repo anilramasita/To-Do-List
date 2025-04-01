@@ -18,6 +18,7 @@ let idCount=object.length;
 
 saveButton.onclick=function(){
     localStorage.setItem("userInputValue",JSON.stringify(object));
+    alert("Saved Successfully!");
 }
 
 
